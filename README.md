@@ -1,14 +1,15 @@
 Copyright 2021 by Southeast University & Nanjing University of Posts and Telecommunications. 
 
-Time: 17/10/2021  Authors:  He Zhou & Weizhuo Li & Buye Zhang 
+Time: 12/11/2021  Authors:  Heng Zhou & Weizhuo Li & Buye Zhang 
 
 Mail: zhouheng2020@seu.edu.cn & liweizhuo@amss.ac.cn & zhangbuye@seu.edu.cn
 
 Description: [MAKG](http://www.makg.com.cn/) is a mobile applications knowledge graph. You can use its original resources and visit the [website](http://www.makg.com.cn/) to enjoy its services.
 
 ## 1. Introduction：
-In this paper, we present a mobile application knowledge graph, namely MAKG, which aims to collect the apps from various resources (e.g., application markets, encyclopedias, news). We design a lightweight ontology of apps. It can bring a well-defined schema of collected apps so that these apps could share more linkage with each other. Moreover, we also evaluate the algorithms of information extraction and knowledge alignment during the process of construction. 
-Experimental results show that several algorithms can be competent to above tasks to some extend and enrich the structured triples in MAKG. Finally, we list three use-cases about MAKG that are helpful to provide better services for security analysts and users.
+In this project, we present a mobile application knowledge graph, namely MAKG, which aims to collect the apps from various resources (e.g., application markets, encyclopedias, news). 
+
+We design a lightweight ontology of apps. It can bring a well-defined schema of collected apps so that these apps could share more linkage with each other. Moreover, we employ the algorithms of information extraction and knowledge alignment during the process of construction so as to enhance structured triples to MAKG. Finally, we list several use-cases about MAKG that are helpful to provide better services for security analysts and users.
 
 
 ## 2. Usage:
@@ -44,10 +45,28 @@ As the number of App Store is fewer than other application markets, we only obta
 ### Extraction-Triples:
 This dataset contains the triples extracted from textual descriptions and news related to apps. We utilize three strategies (i.e., Infobox-based Method, Named entity recognition, Relation extraction platforms including [OpenNRE](https://github.com/thunlp/OpenNRE), [DeepKE](https://github.com/zjunlp/deepke), [FewRel](https://github.com/thunlp/FewRel)) and select the best models to extract basic triples. 
 
-## 3. Citation:
+## 3. Use-Cases:
+We list main use-cases of [MAKG](http://www.makg.com.cn/) about cybersecurity in our developed [WebSite](http://www.makg.com.cn/). 
+
+
+- MAKG can provide [semantic retrieval](http://www.makg.com.cn/search) for users and security analysts  For example, if one user queries one app, MAKG can present more comprehensive than application markets to the user. 
+
+
+- MAKG can link the apps to their appearing textual descriptions (e.g., news) with [entity linking techniques](http://www.makg.com.cn/risk). Benefited from above cases, users can fully understand the information of apps and avoid downloading some invalid apps.
+
+- MAKG can help security analysts to detect some sensitive apps, which own more conditions or plausibility than normal apps that become the hotbeds for related cybercriminals. With the help of comprehensive relations and properties, analysts can define some prior rules or employ more promising algorithms to evaluate the sensitivity and rank them. It can lower the risk of some sensitive apps in advance.
+
+- MAKG can recommend some similar apps for users and security analysts when they request above services. Similarly, if some suitable algorithms are utilized for the recommendation, it can also reduce the potential risks and maintain the security of the Mobile Internet.
+
+
+## 4. Citation:
 If you use this dataset, please cite it as follows:
 
-Normal： He Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na. MAKG: A Mobile Application Knowledge Graph for the Research of Cybersecurity. in: Proceedings of China Conference on Knowledge Graph and Semantic Computing, Guangzhou, China, 2021.
+Normal： Heng Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na. MAKG: A Mobile Application Knowledge Graph for the Research of Cybersecurity. In: Proceedings of China Conference on Knowledge Graph and Semantic Computing, Guangzhou, China, Springer, 2021, pp. 321–328.
 
-BibTeX： @inproceedings{MAKG, author = {He Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na}, title = {MAKG: A Mobile Application Knowledge Graph for the Research of Cybersecurity}, booktitle = {Proceedings of China Conference on Knowledge Graph and Semantic Computing}, year = {2021}
+
+BibTeX： 
+@inproceedings{MAKG, author = {Heng Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na}, title = {Combining Knowledge Graph Embedding and Network Embedding for Detecting Similar Mobile Applications}, booktitle = {Proceedings of China Conference on Knowledge Graph and Semantic Computing,Guangzhou, China}, 
+pages={25--36}, year={2014},
+publisher={Springer}
 }
