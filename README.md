@@ -1,6 +1,6 @@
 Copyright 2021 by Southeast University & Nanjing University of Posts and Telecommunications. 
 
-Time: 12/11/2021  Authors:  Heng Zhou & Weizhuo Li & Buye Zhang 
+Time: 13/11/2021  Authors:  Heng Zhou & Weizhuo Li & Buye Zhang 
 
 Mail: zhouheng2020@seu.edu.cn & liweizhuo@amss.ac.cn & zhangbuye@seu.edu.cn
 
@@ -21,7 +21,7 @@ A technical report with details of these resources and related evaluations can b
 We design one lightweight ontology of apps. It can bring a well-defined schema of collected apps so that these apps could share more linkage with each other.
 It contains 26 basic classes, 11 relations and 45 properties. 
 
-We provide two files (appOntology_en5.owl and appSchema-1.2.xlsx) for researchers to use it. For the former file, it needs to install [protege](https://protege.stanford.edu/) to open it.
+We provide two files (appOntology.owl and appSchema.xlsx) for researchers to use it. For the former file, it needs to install [protege](https://protege.stanford.edu/) to open it.
 
 
 ### AppMarket-Triples:
@@ -46,7 +46,7 @@ As the number of App Store is fewer than other application markets, we only obta
 This dataset contains the triples extracted from textual descriptions and news related to apps. We utilize three strategies (i.e., Infobox-based Method, Named entity recognition, Relation extraction platforms including [OpenNRE](https://github.com/thunlp/OpenNRE), [DeepKE](https://github.com/zjunlp/deepke), [FewRel](https://github.com/thunlp/FewRel)) and select the best models to extract basic triples. 
 
 ## 3. Use-Cases:
-We list main use-cases of [MAKG](http://www.makg.com.cn/) about cybersecurity in our developed [WebSite](http://www.makg.com.cn/). 
+We list the main use-cases of [MAKG](http://www.makg.com.cn/) about cybersecurity in our developed [WebSite](http://www.makg.com.cn/). 
 
 
 - MAKG can provide [semantic retrieval](http://www.makg.com.cn/search) for users and security analysts  For example, if one user queries one app, MAKG can present more comprehensive than application markets to the user. 
@@ -60,13 +60,26 @@ We list main use-cases of [MAKG](http://www.makg.com.cn/) about cybersecurity in
 
 
 ## 4. Citation:
-If you use this dataset, please cite it as follows:
+If you want to employ this dataset, please cite our paper as follows:
 
-Normal： Heng Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na. MAKG: A Mobile Application Knowledge Graph for the Research of Cybersecurity. In: Proceedings of China Conference on Knowledge Graph and Semantic Computing, Guangzhou, China, Springer, 2021, pp. 321–328.
+###Normal： 
+```
+Heng Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na. MAKG: 
+A Mobile Application Knowledge Graph for the Research of Cybersecurity. In: Proceedings of China Conference on Knowledge Graph and Semantic Computing, 
+Guangzhou, China, Springer, 2021, pp. 321–328.
+```
 
 
-BibTeX： 
-@inproceedings{MAKG, author = {Heng Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na}, title = {Combining Knowledge Graph Embedding and Network Embedding for Detecting Similar Mobile Applications}, booktitle = {Proceedings of China Conference on Knowledge Graph and Semantic Computing,Guangzhou, China}, 
-pages={25--36}, year={2014},
+###BibTeX：
+```
+@inproceedings{MAKG2021, 
+author = {Heng Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na}, 
+title = {Combining Knowledge Graph Embedding and Network Embedding for 
+Detecting Similar Mobile Applications}, 
+booktitle = {Proceedings of China Conference on Knowledge Graph and Semantic 
+Computing,Guangzhou, China}, 
+pages={321--328}, 
+year={2021},
 publisher={Springer}
 }
+```
