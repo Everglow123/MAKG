@@ -1,15 +1,14 @@
-Copyright 2023 by Southeast University & Nanjing University of Posts and Telecommunications. 
+Copyright 2024 by Nanjing University of Posts and Telecommunications &S outheast University  
 
-Time: 3/9/2023  Authors:  Heng Zhou & Weizhuo Li & Buye Zhang 
+Time: 20/7/2024  Authors:  Heng Zhou & Weizhuo Li & Buye Zhang & Weiqi Luo
 
-Mail: zhouheng2020@seu.edu.cn & liweizhuo@amss.ac.cn & zhangbuye@seu.edu.cn
+Mail: zhouheng2020@seu.edu.cn & liweizhuo@amss.ac.cn & zhangbuye@seu.edu.cn & 1222097630@njupt.edu.cn
 
 Description: [MAKG](http://www.makg.com.cn/) is a mobile applications knowledge graph, which is a high-quality knowledge graph about millions of applications and provide an open data resource to the researchers from communities in Semantic Web and CyberSecurity.
 You can use its original resources and visit the [website](http://www.makg.com.cn/) to enjoy its services.
 
 ## 1. Introduction：
-In this work, we present a mobile application knowledge graph, namely MAKG, which merge comprehensive resources (e.g., application markets, encyclopedias, news). 
-to construct a high-quality knowledge graph about millions of applications.
+In this work, we present a mobile application knowledge graph, namely MAKG, which merge comprehensive resources (e.g., application markets, encyclopedias, news) to construct a high-quality knowledge graph about millions of applications.
 
 
 We present a comprehensive framework to construct a mobile application knowledge graph for CyberSecurity, in which a lightweight ontology of apps is defined and concrete steps (App Crawling, Knowledge Extraction,  Knowledge Alignment) are instantiated with promising algorithms. It can obtain more structured triples and correspondences among entities from different resources.
@@ -29,19 +28,19 @@ We provide two files (appOntology.owl and appSchema.xlsx) for researchers to use
 
 
 ### AppMarket-Triples:
-This dataset contains raw triples crawlled from [Huawei AppGallery](https://appgallery.huawei.com/), [Xiaomi App Store](https://app.mi.com/game), [Google Play](https://play.google.com/store/apps), [App Store](https://www.apple.com/app-store/). 
+These datasets contain raw triples crawlled from [Huawei AppGallery](https://appgallery.huawei.com/), [Xiaomi App Store](https://app.mi.com/game), [Google Play](https://play.google.com/store/apps), [App Store](https://www.apple.com/app-store/). 
 
 All of the files of these triples from application markets are provided in the format of .nt.
 
 
 ### Encyclopedias:
-This dataset contains the triples of apps crawled from [Baidu Baike](https://baike.baidu.com), [Toutiao Baike](https://www.baike.com/), [Wikipedia](https://www.wanweibaike.com/).
+These dataset contain the triples of apps crawled from [Baidu Baike](https://baike.baidu.com), [Toutiao Baike](https://www.baike.com/), [Wikipedia](https://www.wanweibaike.com/).
 
 As the number of Wikipedia is few, we only provide the extracted triples of apps from Baidu Baike, Toutiao Baike.
 
 
 ### AppMarket-Alignments:
-This dataset contains the alignments of apps, which can share and reuse the description information of apps so as to provide better services based on MAKG for security analysts and users. We utilize two kinds of entity alignment techniques (i.e., Rule miner method, [Knowledge graph embedding-based platform](https://github.com/nju-websoft/OpenEA)) to obtain the best results of them. 
+These datasets contain the alignments of apps, which can share and reuse the description information of apps so as to provide better services based on MAKG for security analysts and users. We utilize two kinds of entity alignment techniques (i.e., Rule miner method, [Knowledge graph embedding-based platform](https://github.com/nju-websoft/OpenEA)) to obtain the best results of them. 
 
 We present all the manually labeled alignments among four mainstream application markekts for evaluation.
 
@@ -50,16 +49,25 @@ In addition, we also provide the correspondences that are automatically generate
 
 
 ### Extraction-Triples:
-This dataset contains the triples extracted from textual descriptions of apps crawled from application markets. We utilize three strategies (i.e., Infobox-based Method, Named entity recognition, Relation extraction platforms including [OpenNRE](https://github.com/thunlp/OpenNRE), [DeepKE](https://github.com/zjunlp/deepke), [FewRel](https://github.com/thunlp/FewRel)) and select the best models to extract basic triples. 
+These datasets contain the triples extracted from textual descriptions of apps crawled from application markets. We utilize three strategies (i.e., Infobox-based Method, Named entity recognition, Relation extraction platforms including [OpenNRE](https://github.com/thunlp/OpenNRE), [DeepKE](https://github.com/zjunlp/deepke), [FewRel](https://github.com/thunlp/FewRel)) and select the best models to extract basic triples. 
+#### Labeled corpus of few-shot relation extraction models:
+These dataset contain the labeled corpus for training the methods for few-shot relation extraction with different ratios (9:1, 8:2, 7:3)
+#### Labeled corpus of NER models:
+These dataset contain the labeled corpus for training the models for named entity recognition with different ratios (9:1, 8:2, 7:3)
+#### Labeled corpus of relation extraction models:
+These dataset contain the labeled corpus for training the methods for relation extraction with different ratios (9:1, 8:2, 7:3)
 
-We also provide the labeled corpus for training the methods based on named entity recognition and relation extraction.
+### Applications-Relevance-Discovery:
+These dataset are two bilingual datasets (i.e., Chinese and English) from MAKG, denoted by MAKG-S and MAKG-S$^+$. 
+MAKG-$S$ contains some sensitive apps because their properties are triggered at least one heuristic principle tailored for snsitivity detection.
+MAKG-$S^+$ is an extended one that employs the TextRank algorithm to integrate external triples by important tokens and add the external relation "relatedTo". 
+To further balance the number and quality of these tokens by TextRank algorithm, we set the threshold of $\theta$ to 0.5.
+
 
 ## 3. Use-Cases:
 We list the main use-cases of [MAKG](http://www.makg.com.cn/) about cybersecurity in our developed [WebSite](http://www.makg.com.cn/). 
 
-
 - MAKG can provide [semantic retrieval](http://www.makg.com.cn/search)for users and security analysts.  For example, if one user queries one app, MAKG can present more comprehensive than application markets to the user. 
-
 
 - MAKG can link the apps to their appearing textual descriptions (e.g., news) with [entity linking techniques](http://www.makg.com.cn/risk). Benefited from above cases, users can fully understand the information of apps and avoid downloading some invalid apps.
 
@@ -78,7 +86,6 @@ Heng Zhou, Weizhuo Li, Buye Zhang, Qiu Ji, Yiming Tan, and Chongning Na. MAKG:
 A Mobile Application Knowledge Graph for the Research of Cybersecurity. In: Proceedings of China Conference on Knowledge Graph and Semantic Computing, 
 Guangzhou, China, Springer, 2021, pp. 321–328.
 ```
-
 
 ###BibTeX：
 ```
